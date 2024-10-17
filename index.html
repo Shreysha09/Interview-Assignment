@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button id="startButton" onclick="Start()">Start</button>
+        <button id="pauseButton">Pause</button>
+        <button id="resetButton" onclick="Reset()">Reset</button>
+    </div>
+    <div style="display: flex;
+    justify-content: center;height: 200px;">
+        <table style="width:300px">
+            <tbody id="tableBody">
+                <tr>
+                    <td id="firstBox" onclick="Mark(firstBox)" style="border-bottom: solid 1px black; text-align: center;">
+                        1
+                    </td>
+                    <td id="secondBox" onclick="Mark(secondBox)" style="border-bottom: solid 1px black;text-align: center;">
+                        2
+                    </td>
+                    <td id="thirdBox" onclick="Mark(thirdBox)" style="border-bottom: solid 1px black;text-align: center;">
+                        3
+                    </td>
+                </tr>
+                <tr>
+                    <td id="fourthBox" onclick="Mark(fourthBox)" style="border-bottom: solid 1px black; text-align: center;">
+                        4
+                    </td>
+                    <td id="fifthBox" onclick="Mark(fifthBox)" style="border-bottom: solid 1px black; text-align: center;">
+                        5
+                    </td>
+                    <td id="sixthBox" onclick="Mark(sixthBox)" style="border-bottom: solid 1px black; text-align: center;">
+                        6
+                    </td>
+                </tr>
+                <tr>
+                    <td id="seventhBox" onclick="Mark(seventhBox)" style="text-align: center;">
+                        7
+                    </td>
+                    <td id="eightBox" onclick="Mark(eightBox)"  style="text-align: center;">
+                        8
+                    </td>
+                    <td id="nineBox" onclick="Mark(nineBox)"  style="text-align: center;">
+                        9
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function Start() {
+            console.log("start")
+            window.location.reload()
+        }
+        function Reset() {
+            console.log("reset")
+            document.getElementById('tableBody').textContent = "";
+        }
+        function Mark(id) {
+            if (id == document.getElementById('firstBox')) {
+                document.getElementById('firstBox').innerHTML = "X"
+            } else if (id == document.getElementById('secondBox')) {
+                document.getElementById('secondBox').innerHTML = "X"
+            }else if (id == document.getElementById('thirdBox')) {
+                document.getElementById('thirdBox').innerHTML = "X"
+            }else if (id == document.getElementById('fourthBox')) {
+                document.getElementById('fourthBox').innerHTML = "X"
+            }else if (id == document.getElementById('fifthBox')) {
+                document.getElementById('fifthBox').innerHTML = "X"
+            }else if (id == document.getElementById('sixthBox')) {
+                document.getElementById('sixthBox').innerHTML = "X"
+            }else if (id == document.getElementById('seventhBox')) {
+                document.getElementById('seventhBox').innerHTML = "X"
+            }else if (id == document.getElementById('eightBox')) {
+                document.getElementById('eightBox').innerHTML = "X"
+            }else if (id == document.getElementById('nineBox')) {
+                document.getElementById('nineBox').innerHTML = "X"
+            }
+        }
+    </script>
+
+<!-- madhumita@ascendeum.com -->
+
+</body>
+
+</html>
